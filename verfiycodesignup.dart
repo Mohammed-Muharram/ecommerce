@@ -3,11 +3,11 @@
 import 'package:ecommerccc/core/class/crud.dart';
 import 'package:ecommerccc/linkapi.dart';
 
-class VerifyCodeForgetPasswordData {
+class VerfiyCodeSignUpData {
   Crud crud;
-  VerifyCodeForgetPasswordData(this.crud);
-  postdata(String email ,String verifycode) async {
-    var response = await crud.postData(AppLink.verifycodeforgetpassword, {
+  VerfiyCodeSignUpData(this.crud);
+  postdata(String email ,String verifycode ) async {
+    var response = await crud.postData(AppLink.verifycodessignup, {
       "email" : email , 
       "verifycode" : verifycode   
     });

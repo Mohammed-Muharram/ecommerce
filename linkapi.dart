@@ -1,29 +1,37 @@
-class AppLink{
-  static const String server="https://php-myadmin.net/db_structure.php?db=if0_38155641_ecommmerce/";
+class AppLink {
+static const String server = "https://localhost/ecommercee";
+  
+static const String imageststatic = "https://localhost/ecommercee/upload";
+//========================== Image ============================
+  static const String imagestCategories = "$imageststatic/categories";
+  static const String imagestItems = "$imageststatic/items";
+// =============================================================
+//
+  static const String test = "$server/test.php";
 
-//image
-  static const String imageststatic = "$server/upload";
-  // static const String imagestatic=' $imageststatic/categories';
-  static const String imageCategories='$imageststatic/categories';
-  static const String imageItems='$imageststatic/items';
+// ================================= Auth ========================== //
 
-//===============Auth=====================
-  static const String signUp='$server/auth/signup.php';
-  static const String login='$server/auth/login.php';
-  static const String verfiycodessignup='$server/auth/verfiycode.php';
+  static const String signUp = "$server/auth/signup.php";
+  static const String login = "$server/auth/login.php";
+  static const String verifycodessignup = "$server/auth/verfiycode.php";
 
-//==============Forgetpassword===========
-  static const String checkemail='$server/forgetpassword/checkemail.php';
-  static const String verfiycodeforgetpassword='$server/forgetpassword/verfiycode.php';
-  static const String resetpassword='$server/forgetpassword/resetpassword.php';
+// ================================= ForgetPassword ========================== //
 
+  static const String checkEmail = "$server/forgetpassword/checkemail.php";
+  static const String resetPassword =
+      "$server/forgetpassword/resetpassword.php";
+  static const String verifycodeforgetpassword =
+      "$server/forgetpassword/verifycode.php";
 
-  //Home
-  static const String homepage='$server/home.php';
-  static const String items='$server/items/items.php';
+// Home
 
-//Favorite
-  static const String favoriteAdd='$server/favorite/add.php';
-  static const String favoriteRemove='$server/favorite/remove.php';
+  static const String homepage = "$server/home.php";
+// items
+  static const String items = "$server/items/items.php";
 
+// Favorite
+
+  static const String favoriteAdd = "$server/favorite/add.php";
+  static const String favoriteRemove = "$server/favorite/remove.php";
+  static const String favoriteView = "$server/favorite/view.php";
 }

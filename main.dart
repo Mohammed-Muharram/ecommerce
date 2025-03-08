@@ -1,11 +1,11 @@
-import 'package:ecommerce/bindings/intialbindings.dart';
-import 'package:ecommerce/core/localization/changelocal.dart';
-import 'package:ecommerce/core/localization/translation.dart';
-import 'package:ecommerce/core/services/services.dart';
-import 'package:ecommerce/routes.dart';
-import 'package:ecommerce/view/screen/homescreen.dart';
-import 'package:flutter/material.dart';
+import 'package:ecommerccc/bindings/intialbindings.dart';
+import 'package:ecommerccc/core/localization/translation.dart';
+import 'package:ecommerccc/core/services/services.dart';
+import 'package:ecommerccc/routes.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+
+import 'core/localization/changelocal.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,27 +14,19 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
+  const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-
-    LocaleController controller=Get.put(LocaleController());
+    LocaleController controller = Get.put(LocaleController());
     return GetMaterialApp(
       translations: MyTranslation(),
       debugShowCheckedModeBanner: false,
-      title: 'Flutter ',
-
+      title: 'Ecommerce',
       locale: controller.language,
-      theme:controller.appTheme,
-        initialBinding: IntialBindings(),
-
-        getPages:routes,
-      // home:const HomeScreen(),
-      // home:Items(),
-      //   routes:routes ,
+      theme: controller.appTheme,
+      initialBinding: InitialBindings(),
+      // routes: routes,
+      getPages: routes,
     );
   }
 }
-
